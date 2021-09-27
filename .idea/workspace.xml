@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4abf0f68-2617-4d06-b156-f00bab3b4069" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/HandlerClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/chat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/target/classes/HandlerClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/target/classes/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/chat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/root/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/target/classes/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/Handler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +51,7 @@
       <recent name="C:\Users\Stas\Desktop\repo\CloudStorage\Client\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.ServerNIO">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="Client" />
@@ -83,8 +73,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerNIO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ServerNIO" />
+      <module name="Server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ServerNIO" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.IoIntro" />
@@ -112,6 +110,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -121,6 +120,21 @@
           <line>6</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Server/src/main/java/ServerNIO.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Server/src/main/java/ServerNIO.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Server/src/main/java/ServerNIO.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Server/src/main/java/Handler.java</url>
           <line>27</line>
@@ -128,6 +142,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Server/src/main/java/ServerNIO.java</url>
+          <line>101</line>
+          <properties class="ServerNIO">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
