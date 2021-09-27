@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4abf0f68-2617-4d06-b156-f00bab3b4069" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/ServerNIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/ServerNIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/ServerNIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/ServerNIO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +124,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Server/src/main/java/ServerNIO.java</url>
-          <line>104</line>
+          <line>103</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -145,7 +147,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Server/src/main/java/ServerNIO.java</url>
-          <line>101</line>
+          <line>100</line>
           <properties class="ServerNIO">
             <option name="EMULATED" value="true" />
           </properties>

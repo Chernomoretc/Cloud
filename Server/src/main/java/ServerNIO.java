@@ -77,7 +77,6 @@ public class ServerNIO {
             buffer.clear();
         }
         String message = msg.toString().trim();
-
        if (message.equals("ls")) {
             channel.write(ByteBuffer.wrap(
                     showServerDir(dirSever).getBytes(StandardCharsets.UTF_8)));
