@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="493.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
-    <ListView fx:id="listViewClient" layoutX="14.0" layoutY="14.0" prefHeight="426.0" prefWidth="270.0"/>
-    <TextField fx:id="input" layoutX="14.0" layoutY="439.0" onAction="#send" prefHeight="38.0" prefWidth="270.0"/>
-    <ListView fx:id="listViewServer" layoutX="316.0" layoutY="14.0" prefHeight="426.0" prefWidth="270.0"/>
+<VBox id="Cloud" alignment="TOP_CENTER" depthTest="DISABLE" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT"
+      spacing="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Controller">
+    <HBox prefHeight="480.0" prefWidth="640.0" spacing="5.0" VBox.vgrow="ALWAYS">
+        <fx:include fx:id="leftPanel" source="filePanel.fxml" HBox.hgrow="ALWAYS"/>
+        <fx:include fx:id="rightPanel" source="filePanel.fxml" HBox.hgrow="ALWAYS"/>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+    </HBox>
 
-</AnchorPane>
+    <HBox spacing="5">
+        <Button maxWidth="Infinity" focusTraversable="false" text="Send File" HBox.hgrow="ALWAYS" onAction="#sendFile" />
+        <Button maxWidth="Infinity" focusTraversable="false" text="Переместить файл" HBox.hgrow="ALWAYS"/>
+        <Button maxWidth="Infinity" focusTraversable="false" text="Удалить файл" HBox.hgrow="ALWAYS"/>
+        <Button maxWidth="Infinity" focusTraversable="false" text="Show Server Files" HBox.hgrow="ALWAYS" onAction="#sendListResponse"/>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+    </HBox>
+
+<!--    <TextField fx:id="input" layoutX="14.0" layoutY="439.0" onAction="#send" prefHeight="38.0" prefWidth="270.0"/>-->
+    <opaqueInsets>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+    </opaqueInsets>
+
+</VBox>
