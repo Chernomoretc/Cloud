@@ -1,11 +1,9 @@
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,11 +15,6 @@ import java.util.stream.Collectors;
 
 public class ControllerFilePanel implements Initializable {
 
-    public String getFileName() {
-        return fileName;
-    }
-
-    public String fileName;
 
     @FXML
     TableView<FileInfo> filesTable;
@@ -66,19 +59,8 @@ public class ControllerFilePanel implements Initializable {
             };
         });
         fileSizeColumn.setPrefWidth(120);
-
-
         filesTable.getColumns().addAll(fileTypeColumn, filenameColumn, fileSizeColumn);
         filesTable.getSortOrder().add(fileTypeColumn);
-
-        filesTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (event.getClickCount() == 1) {
-                    fileName = filesTable.getSelectionModel().getSelectedItem().getFilename();
-                }
-            }
-        });
     }
 
     public void updateList(Path path) {
@@ -111,10 +93,6 @@ public class ControllerFilePanel implements Initializable {
         }
     }
 
-//    public void selectDiskAction(ActionEvent actionEvent) {
-//        ComboBox<String> element = (ComboBox<String>) actionEvent.getSource();
-//        updateList(Paths.get(element.getSelectionModel().getSelectedItem()));
-//    }
 
     public String getSelectedFilename() {
         if (!filesTable.isFocused()) {

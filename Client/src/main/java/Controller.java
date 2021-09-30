@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.layout.VBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.*;
 import java.net.Socket;
 import java.net.URL;
@@ -27,13 +28,11 @@ public class Controller implements Initializable {
     VBox leftPanel, rightPanel;
 
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-         leftPC = (ControllerFilePanel) leftPanel.getProperties().get("ctrl");
-         rightPC = (ControllerFilePanel) rightPanel.getProperties().get("ctrl");
+        leftPC = (ControllerFilePanel) leftPanel.getProperties().get("ctrl");
+        rightPC = (ControllerFilePanel) rightPanel.getProperties().get("ctrl");
         leftPC.updateList(dirClient);
         leftPC.updatePathField("Client/root/");
         rightPC.updatePathField("Server/root/");
@@ -75,11 +74,10 @@ public class Controller implements Initializable {
 
     public void sendFile(ActionEvent actionEvent) throws IOException {
 
-
-        if(Files.exists(dirClient.resolve(leftPC.fileName)))
-        {
-            os.writeObject(new Command(CommandType.FILE_SEND,leftPC.fileName,
-                    Files.readAllBytes(dirClient.resolve(leftPC.fileName))));
+       String fileName = leftPC.getSelectedFilename();
+        if (Files.exists(dirClient.resolve(fileName))) {
+            os.writeObject(new Command(CommandType.FILE_SEND, fileName,
+                    Files.readAllBytes(dirClient.resolve(fileName))));
 
         }
     }

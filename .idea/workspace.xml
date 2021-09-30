@@ -5,35 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4abf0f68-2617-4d06-b156-f00bab3b4069" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/CommandType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/FileMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/ServerNetty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/ControllerFilePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/ControllerFilePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/resources/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/chat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/target/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/filePanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/filePanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/Controller$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/target/classes/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/chat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/root/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/ServerNIO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/target/classes/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/target/classes/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/target/classes/ServerNIO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/filePanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/filePanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/panel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/FileMessage.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
