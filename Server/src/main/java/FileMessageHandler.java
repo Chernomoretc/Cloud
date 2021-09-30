@@ -17,7 +17,7 @@ public class FileMessageHandler extends SimpleChannelInboundHandler<Command> {
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Command cmd) throws Exception {
         // TODO: 23.09.2021 Разработка системы команд
-
+       // Сервер пока только получает файлы и отправляет содержимое серверной парки
         switch (cmd.getType()) {
             case LIST_RESPONSE:
                 ctx.write(new Command(CommandType.LIST_REQUEST, showServerDir().getBytes(StandardCharsets.UTF_8)));
@@ -27,7 +27,6 @@ public class FileMessageHandler extends SimpleChannelInboundHandler<Command> {
             case FILE_SEND:
                 Files.write(dirServer.resolve(cmd.getFileName()), cmd.getBytes());
                 ctx.write(new Command(CommandType.LIST_REQUEST, showServerDir().getBytes(StandardCharsets.UTF_8)));
-
                 ctx.flush();
                 break;
 

@@ -17,8 +17,6 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     private static final Logger log = LoggerFactory.getLogger(Controller.class);
-
-
     private Path dirClient = Paths.get("Client", "root");
     private ObjectDecoderInputStream is;
     private ObjectEncoderOutputStream os;

@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+//Класс для столбцов TableView
 public class FileInfo {
     public enum FileType {
         FILE("F"), DIRECTORY("D");
@@ -46,12 +47,11 @@ public class FileInfo {
         this.size = size;
     }
 
-//Конструктор для данных сервера
-    public FileInfo(String file)
-    {
-    this.filename = file.split(" ")[1];
-    this.size = Long.parseLong(file.split(" ")[2]);
-    this.type =  file.split(" ")[0].equals("FILE") ? FileType.FILE : FileType.FILE;
+    //Конструктор для данных сервера
+    public FileInfo(String file) {
+        this.filename = file.split(" ")[1];
+        this.size = Long.parseLong(file.split(" ")[2]);
+        this.type = file.split(" ")[0].equals("FILE") ? FileType.FILE : FileType.FILE;
     }
 
 

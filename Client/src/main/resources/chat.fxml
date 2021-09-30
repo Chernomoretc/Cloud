@@ -17,8 +17,8 @@
 
     <HBox spacing="5">
         <Button maxWidth="Infinity" focusTraversable="false" text="Send File" HBox.hgrow="ALWAYS" onAction="#sendFile"/>
-        <Button maxWidth="Infinity" focusTraversable="false" text="Переместить файл" HBox.hgrow="ALWAYS"/>
-        <Button maxWidth="Infinity" focusTraversable="false" text="Удалить файл" HBox.hgrow="ALWAYS"/>
+        <Button maxWidth="Infinity" focusTraversable="false" text="Upload File" HBox.hgrow="ALWAYS"/>
+        <Button maxWidth="Infinity" focusTraversable="false" text="Delete File" HBox.hgrow="ALWAYS"/>
         <Button maxWidth="Infinity" focusTraversable="false" text="Show Server Files" HBox.hgrow="ALWAYS"
                 onAction="#sendListResponse"/>
         <padding>
