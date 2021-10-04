@@ -5,13 +5,10 @@ import java.nio.file.Path;
 
 public class ListRequest extends Command {
     //Отправляет клиенту список файлов
-   private CommandType listRequest = CommandType.LIST_REQUEST;
-   private  byte [] bytes;
+    private CommandType listRequest = CommandType.LIST_REQUEST;
+    private byte[] bytes;
 
-
-
-
-    public static byte [] sendServerDirInfo(Path path) throws IOException {
+    public static byte[] sendServerDirInfo(Path path) throws IOException {
         StringBuilder sb = new StringBuilder();
         Files.list(path).map(FileInfo::new).forEach(
                 s ->

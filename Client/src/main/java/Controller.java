@@ -46,11 +46,10 @@ public class Controller implements Initializable {
             {
                 try {
                     while (true) {
-                        System.out.println("Hello");
                         Command c = (Command) is.readObject();
                         switch (c.getType()) {
                             case LIST_REQUEST:
-                                rightPC.updateListServer(new String(((ListRequest)c).getBytes()));
+                                rightPC.updateListServer(new String(((ListRequest) c).getBytes()));
 
 
                         }
@@ -72,7 +71,7 @@ public class Controller implements Initializable {
 
     public void sendFile(ActionEvent actionEvent) throws IOException {
 
-       String fileName = leftPC.getSelectedFilename();
+        String fileName = leftPC.getSelectedFilename();
         if (Files.exists(dirClient.resolve(fileName))) {
             os.writeObject(new FileSend(fileName,
                     Files.readAllBytes(dirClient.resolve(fileName))));
