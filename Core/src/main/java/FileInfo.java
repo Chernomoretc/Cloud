@@ -47,7 +47,7 @@ public class FileInfo {
         this.size = size;
     }
 
-    //Конструктор для данных сервера
+    //Конструктор для данных c сервера
     public FileInfo(String file) {
         this.filename = file.split(" ")[1];
         this.size = Long.parseLong(file.split(" ")[2]);

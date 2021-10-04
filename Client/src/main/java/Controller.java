@@ -37,7 +37,7 @@ public class Controller implements Initializable {
 
 
         try {
-            Socket socket = new Socket("localhost", 8189);
+            Socket socket = new Socket("localhost", 8180);
             is = new ObjectDecoderInputStream(socket.getInputStream());
             os = new ObjectEncoderOutputStream(socket.getOutputStream());
 
@@ -46,11 +46,11 @@ public class Controller implements Initializable {
             {
                 try {
                     while (true) {
-
+                        System.out.println("Hello");
                         Command c = (Command) is.readObject();
                         switch (c.getType()) {
                             case LIST_REQUEST:
-                                rightPC.updateListServer(new String(c.getBytes()));
+                                rightPC.updateListServer(new String(((ListRequest)c).getBytes()));
 
 
                         }
@@ -67,14 +67,14 @@ public class Controller implements Initializable {
     }
 
     public void sendListResponse(ActionEvent actionEvent) throws IOException {
-        os.writeObject(new Command(CommandType.LIST_RESPONSE));
+        os.writeObject(new ListResponse());
     }
 
     public void sendFile(ActionEvent actionEvent) throws IOException {
 
        String fileName = leftPC.getSelectedFilename();
         if (Files.exists(dirClient.resolve(fileName))) {
-            os.writeObject(new Command(CommandType.FILE_SEND, fileName,
+            os.writeObject(new FileSend(fileName,
                     Files.readAllBytes(dirClient.resolve(fileName))));
 
         }

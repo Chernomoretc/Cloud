@@ -5,11 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4abf0f68-2617-4d06-b156-f00bab3b4069" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/FileRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/FileResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/FileSend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/ListRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/ListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/PathRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/PathResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/root/Demo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/chat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/chat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/CommandType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/FileInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/CommandType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/CommandType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/FileInfo$FileType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/FileInfo$FileType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/FileInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/FileInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/FileMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/FileMessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/ServerNetty.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/ServerNetty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/FileMessageHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/FileMessageHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/FileMessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/FileMessageHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/ServerNetty.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/ServerNetty.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +64,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1yRCHLdnHNWjGPsSarsynh9oNc1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
