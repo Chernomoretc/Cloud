@@ -23,7 +23,7 @@ public class FileMessageHandler extends SimpleChannelInboundHandler<Command> {
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Command cmd) throws Exception {
-        // Сервер пока только получает файлы и отправляет содержимое серверной папки
+        //Все работает кроме: PathResponse , PathRequest , UpPathServer
         switch (cmd.getType()) {
             case LIST_RESPONSE:
                 ctx.writeAndFlush(new ListRequest(dirServer));

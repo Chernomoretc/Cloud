@@ -116,12 +116,13 @@ public class Controller implements Initializable {
             os.flush();
             rightFileName = null;
         }
-        else {
-            String leftFileName = leftPC.getSelectedFilename();
-            Files.delete(Paths.get(leftPC.getCurrentPath()).resolve(leftFileName));
-            leftPC.updateList(Paths.get(leftPC.getCurrentPath()));
-            leftFileName = null;
-        }
+//!!!!
+//        else {
+//            String leftFileName = leftPC.getSelectedFilename();
+//            Files.delete(Paths.get(leftPC.getCurrentPath()).resolve(leftFileName));
+//            leftPC.updateList(Paths.get(leftPC.getCurrentPath()));
+//            leftFileName = null;
+//        }
 
     }
 }

@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4abf0f68-2617-4d06-b156-f00bab3b4069" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/root/dirClient/Demo.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/target/classes/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/chat.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/root/hello.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/root/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/FileMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/FileMessageHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
