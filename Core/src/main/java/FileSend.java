@@ -5,7 +5,7 @@ public class FileSend extends Command {
     private byte[] bytes;
 
 
-    public String getFileName() {
+    public String  getFileName() {
         return fileName;
     }
 

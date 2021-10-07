@@ -35,7 +35,7 @@ public class ServerNetty {
                             );
                         }
                     })
-                    .bind(8180)
+                    .bind(8190)
                     .sync();
             log.debug("Server started...");
             channelFuture.channel().closeFuture().sync(); // block

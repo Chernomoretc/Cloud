@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     private static final Logger log = LoggerFactory.getLogger(Controller.class);
-    private Path dirClient = Paths.get("Client", "root");
+    private Path dirClient;
     private ObjectDecoderInputStream is;
     private ObjectEncoderOutputStream os;
     ControllerFilePanel leftPC;
@@ -31,13 +31,11 @@ public class Controller implements Initializable {
 
         leftPC = (ControllerFilePanel) leftPanel.getProperties().get("ctrl");
         rightPC = (ControllerFilePanel) rightPanel.getProperties().get("ctrl");
+        createDirClient();
         leftPC.updateList(dirClient);
-        leftPC.updatePathField("Client/root/");
-        rightPC.updatePathField("Server/root/");
-
 
         try {
-            Socket socket = new Socket("localhost", 8180);
+            Socket socket = new Socket("localhost", 8190);
             is = new ObjectDecoderInputStream(socket.getInputStream());
             os = new ObjectEncoderOutputStream(socket.getOutputStream());
 
@@ -50,13 +48,24 @@ public class Controller implements Initializable {
                         switch (c.getType()) {
                             case LIST_REQUEST:
                                 rightPC.updateListServer(new String(((ListRequest) c).getBytes()));
-
-
+                                break;
+                            case FILE_REQUEST:
+                                System.out.println(((FileRequest) c).getFileName());
+                                break;
+                            case PATH_REQUEST:
+                                rightPC.updatePathField(((PathRequest) c).getCurrentServerDir());
+                                break;
+                            case FILE_SEND:
+                                Files.write(Paths.get(leftPC.getCurrentPath()).resolve(((FileSend) c).getFileName()),
+                                        ((FileSend) c).getBytes());
+                                leftPC.updateList(Paths.get(leftPC.getCurrentPath()));
+                                break;
                         }
 
                     }
                 } catch (Exception e) {
                     log.error("exception while read from input stream");
+                    e.printStackTrace();
                 }
             });
             demon.start();
@@ -65,6 +74,7 @@ public class Controller implements Initializable {
         }
     }
 
+
     public void sendListResponse(ActionEvent actionEvent) throws IOException {
         os.writeObject(new ListResponse());
     }
@@ -72,10 +82,43 @@ public class Controller implements Initializable {
     public void sendFile(ActionEvent actionEvent) throws IOException {
 
         String fileName = leftPC.getSelectedFilename();
-        if (Files.exists(dirClient.resolve(fileName))) {
+        if (Files.exists(Paths.get(leftPC.getCurrentPath()).resolve(fileName))) {
+            System.out.println("ok");
             os.writeObject(new FileSend(fileName,
-                    Files.readAllBytes(dirClient.resolve(fileName))));
+                    Files.readAllBytes(Paths.get(leftPC.getCurrentPath()).resolve(fileName))));
+            os.flush();
+        }
+    }
 
+    public void uploadFile(ActionEvent actionEvent) throws IOException {
+        String fileName = rightPC.getSelectedFilename();
+        os.writeObject(new FileResponse(fileName));
+        os.flush();
+    }
+
+    private void createDirClient() {
+        File dir = new File(Paths.get("Client", "root").toString());
+        if (!dir.exists()) {
+            dir.mkdir();
+            dirClient = dir.toPath();
+        } else {
+            dirClient = Paths.get("Client", "root");
+        }
+    }
+
+
+    public void deleteFile(ActionEvent actionEvent) throws IOException {
+        String rightFileName = rightPC.getSelectedFilename();
+        String leftFileName = leftPC.getSelectedFilename();
+        if (!leftFileName.isEmpty()) {
+            Files.delete(Paths.get(leftPC.getCurrentPath()).resolve(leftFileName));
+            leftPC.updateList(Paths.get(leftPC.getCurrentPath()));
+            leftFileName = null;
+        }
+        else if (!rightFileName.equals(null)) {
+            os.writeObject(new DeleteFile(rightFileName));
+            os.flush();
+            rightFileName =null;
         }
     }
 }

@@ -1,9 +1,11 @@
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,14 +17,10 @@ import java.util.stream.Collectors;
 
 public class ControllerFilePanel implements Initializable {
 
+    private String flag;
 
     @FXML
     TableView<FileInfo> filesTable;
-
-
-    @FXML
-    ComboBox<String> disksBox;
-
 
     @FXML
     TextField pathField;
@@ -61,11 +59,26 @@ public class ControllerFilePanel implements Initializable {
         fileSizeColumn.setPrefWidth(120);
         filesTable.getColumns().addAll(fileTypeColumn, filenameColumn, fileSizeColumn);
         filesTable.getSortOrder().add(fileTypeColumn);
+        filesTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.getClickCount() == 2) {
+                    Path path = Paths.get(pathField.getText()).resolve(filesTable.getSelectionModel().getSelectedItem().getFilename());
+                    if (Files.isDirectory(path)) {
+                        updateList(path);
+                    }
+                }
+            }
+        });updateList(Paths.get("."));
     }
+
+
+
+
 
     public void updateList(Path path) {
         try {
-            //  pathField.setText(path.normalize().toAbsolutePath().toString());
+            pathField.setText(path.normalize().toString());
             filesTable.getItems().clear();
             filesTable.getItems().addAll(Files.list(path).map(FileInfo::new).collect(Collectors.toList()));
             filesTable.sort();
@@ -88,7 +101,7 @@ public class ControllerFilePanel implements Initializable {
 
     public void btnPathUpAction(ActionEvent actionEvent) {
         Path upperPath = Paths.get(pathField.getText()).getParent();
-        if (upperPath != null) {
+        if (upperPath != null && !upperPath.endsWith("Client")) {
             updateList(upperPath);
         }
     }
@@ -111,4 +124,11 @@ public class ControllerFilePanel implements Initializable {
     }
 
 
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
 }

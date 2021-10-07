@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4abf0f68-2617-4d06-b156-f00bab3b4069" name="Default Changelist" comment="" />
+    <list default="true" id="4abf0f68-2617-4d06-b156-f00bab3b4069" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Client/root/dirClient/hello.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/DeleteFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/ControllerFilePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/ControllerFilePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/chat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/filePanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/filePanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/ControllerFilePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/target/classes/chat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/target/classes/chat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/CommandType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/FileRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/FileRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/FileResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/FileResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/FileSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/FileSend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/PathRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/PathRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/PathResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/PathResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/CommandType.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/CommandType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/FileRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/FileRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/FileResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/FileResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/ListRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/ListRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/ListResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/ListResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/PathRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/PathRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/target/classes/PathResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core/target/classes/PathResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/FileMessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/FileMessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/IoIntro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/IoIntro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/ServerNetty.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/ServerNetty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/FileMessageHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/FileMessageHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/FileMessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/FileMessageHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/IoIntro.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/IoIntro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/target/classes/ServerNetty.class" beforeDir="false" afterPath="$PROJECT_DIR$/Server/target/classes/ServerNetty.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +79,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -56,6 +91,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Stas\Desktop\repo\CloudStorage\Client\src\main\resources" />
       <recent name="C:\Users\Stas\Desktop\repo\CloudStorage\Server\src\main\resources" />
@@ -105,9 +143,9 @@
       <list>
         <item itemvalue="Application.App" />
         <item itemvalue="Application.ServerNetty" />
+        <item itemvalue="Application.IoIntro" />
         <item itemvalue="Application.ServerNIO" />
         <item itemvalue="Application.Server" />
-        <item itemvalue="Application.IoIntro" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +201,14 @@
           <url>file://$PROJECT_DIR$/Client/src/main/java/ControllerFilePanelClent.java</url>
           <line>18</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Client/src/main/java/Controller.java</url>
+          <line>92</line>
+          <properties class="Controller" method="uploadFile">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

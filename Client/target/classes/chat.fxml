@@ -4,21 +4,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox id="Cloud" alignment="TOP_CENTER" depthTest="DISABLE" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT"
-      spacing="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+<VBox   id="Cloud" alignment="TOP_CENTER" depthTest="DISABLE" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT"
+       xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" spacing="5"
+        prefHeight="600.0" prefWidth="800.0"
       fx:controller="Controller">
-    <HBox prefHeight="480.0" prefWidth="640.0" spacing="5.0" VBox.vgrow="ALWAYS">
-        <fx:include fx:id="leftPanel" source="filePanel.fxml" HBox.hgrow="ALWAYS"/>
-        <fx:include fx:id="rightPanel" source="filePanel.fxml" HBox.hgrow="ALWAYS"/>
+    <HBox  spacing="5.0" VBox.vgrow="ALWAYS" >
+        <fx:include fx:id="leftPanel" source="filePanel.fxml" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"/>
+        <fx:include fx:id="rightPanel" source="filePanel.fxml" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"/>
         <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            <Insets  bottom="5.0" left="5.0" right="5.0" top="5.0"/>
         </padding>
     </HBox>
 
     <HBox spacing="5">
         <Button maxWidth="Infinity" focusTraversable="false" text="Send File" HBox.hgrow="ALWAYS" onAction="#sendFile"/>
-        <Button maxWidth="Infinity" focusTraversable="false" text="Upload File" HBox.hgrow="ALWAYS"/>
-        <Button maxWidth="Infinity" focusTraversable="false" text="Delete File" HBox.hgrow="ALWAYS"/>
+        <Button maxWidth="Infinity" focusTraversable="false" text="Upload File" HBox.hgrow="ALWAYS"
+                onAction="#uploadFile"/>
+        <Button maxWidth="Infinity" focusTraversable="false" text="Delete File" HBox.hgrow="ALWAYS" onAction="#deleteFile"/>
         <Button maxWidth="Infinity" focusTraversable="false" text="Show Server Files" HBox.hgrow="ALWAYS"
                 onAction="#sendListResponse"/>
         <padding>
