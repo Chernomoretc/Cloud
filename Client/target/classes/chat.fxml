@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox   id="Cloud" alignment="TOP_CENTER" depthTest="DISABLE" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT"
+<VBox    id="Cloud" alignment="TOP_CENTER" depthTest="DISABLE" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT"
        xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" spacing="5"
         prefHeight="600.0" prefWidth="800.0"
       fx:controller="Controller">

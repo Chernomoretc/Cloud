@@ -109,17 +109,20 @@ public class Controller implements Initializable {
 
     public void deleteFile(ActionEvent actionEvent) throws IOException {
         String rightFileName = rightPC.getSelectedFilename();
-        String leftFileName = leftPC.getSelectedFilename();
-        if (!leftFileName.isEmpty()) {
+        System.out.println(rightFileName);
+        if (!rightFileName.equals("null")) {
+
+            os.writeObject(new DeleteFile(rightFileName));
+            os.flush();
+            rightFileName = null;
+        }
+        else {
+            String leftFileName = leftPC.getSelectedFilename();
             Files.delete(Paths.get(leftPC.getCurrentPath()).resolve(leftFileName));
             leftPC.updateList(Paths.get(leftPC.getCurrentPath()));
             leftFileName = null;
         }
-        else if (!rightFileName.equals(null)) {
-            os.writeObject(new DeleteFile(rightFileName));
-            os.flush();
-            rightFileName =null;
-        }
+
     }
 }
 
