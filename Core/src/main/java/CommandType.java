@@ -12,7 +12,9 @@ public enum CommandType {
     LIST_RESPONSE,
     PATH_REQUEST,
     PATH_RESPONSE,
-    FILE_DELETE
+    FILE_DELETE,
+    BIG_FILE_SEND,
+    PATH_UP
 
 
 }
