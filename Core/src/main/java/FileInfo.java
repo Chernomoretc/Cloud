@@ -5,7 +5,7 @@ import java.nio.file.Path;
 //Класс для столбцов TableView
 public class FileInfo {
     public enum FileType {
-        FILE("F"), DIRECTORY("D");
+        FILE("F"), DIRECTORY("D"),IS_EMPTY("E");
 
         private String name;
 
@@ -49,12 +49,24 @@ public class FileInfo {
 
     //Конструктор для данных c сервера
     public FileInfo(String file) {
-        this.filename = file.split(" ")[1];
-        this.size = Long.parseLong(file.split(" ")[2]);
-        this.type = file.split(" ")[0].equals("FILE") ? FileType.FILE : FileType.FILE;
+        if(file.equals("folder is empty"))
+        {
+            this.filename = file;
+            this.type = FileType.IS_EMPTY;
+            this.size = 0;
+        }else {
+            try {
+                this.filename = file.split(" ")[1];
+                this.size = Long.parseLong(file.split(" ")[2]);
+                this.type = file.split(" ")[0].equals("FILE") ? FileType.FILE : FileType.DIRECTORY;
+            } catch (Exception e) {
+                throw new RuntimeException("Unable to create file info from path");
+            }
+        }
+
     }
 
-
+//Конструктор для клиента
     public FileInfo(Path path) {
         try {
             this.filename = path.getFileName().toString();

@@ -21,8 +21,6 @@
         <Button maxWidth="Infinity" focusTraversable="false" text="Upload File" HBox.hgrow="ALWAYS"
                 onAction="#uploadFile"/>
         <Button maxWidth="Infinity" focusTraversable="false" text="Delete File" HBox.hgrow="ALWAYS" onAction="#deleteFile"/>
-        <Button maxWidth="Infinity" focusTraversable="false" text="Show Server Files" HBox.hgrow="ALWAYS"
-                onAction="#sendListResponse"/>
         <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
         </padding>

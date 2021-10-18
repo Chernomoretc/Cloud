@@ -1,8 +1,11 @@
+import java.io.FileInputStream;
+
 public class FileSend extends Command {
     //Отправляем файл
     private String fileName;
     private CommandType fileSend = CommandType.FILE_SEND;
     private byte[] bytes;
+
 
 
     public String  getFileName() {
