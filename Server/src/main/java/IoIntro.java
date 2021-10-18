@@ -20,6 +20,7 @@ public class IoIntro {
 
 
     public static void main(String[] args) {
-       dir();
+       String file ="";
+        System.out.println(file.isEmpty());
     }
 }

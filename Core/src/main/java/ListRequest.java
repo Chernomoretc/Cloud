@@ -10,14 +10,19 @@ public class ListRequest extends Command {
 
     public static byte[] sendServerDirInfo(Path path) throws IOException {
         StringBuilder sb = new StringBuilder();
-        Files.list(path).map(FileInfo::new).forEach(
-                s ->
-                {
-                    sb.append(s.getType() + " ");
-                    sb.append(s.getFilename() + " ");
-                    sb.append(s.getSize() + "\n");
-                }
-        );
+      if(Files.newDirectoryStream(path).iterator().hasNext())
+      {
+          Files.list(path).map(FileInfo::new).forEach(
+                  s ->
+                  {
+                      sb.append(s.getType() + " ");
+                      sb.append(s.getFilename() + " ");
+                      sb.append(s.getSize() + "\n");
+                  }
+          );
+      }else {
+          sb.append("folder is empty");
+      }
         return sb.toString().getBytes(StandardCharsets.UTF_8);
     }
 

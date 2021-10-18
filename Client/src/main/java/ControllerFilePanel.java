@@ -1,3 +1,4 @@
+import io.netty.handler.codec.serialization.ObjectEncoderOutputStream;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
@@ -16,15 +17,16 @@ import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public class ControllerFilePanel implements Initializable {
-
-    private String flag;
-
+    ObjectEncoderOutputStream os;
     @FXML
     TableView<FileInfo> filesTable;
 
     @FXML
     TextField pathField;
 
+    public void setOs(ObjectEncoderOutputStream os) {
+        this.os = os;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -69,11 +71,9 @@ public class ControllerFilePanel implements Initializable {
                     }
                 }
             }
-        });updateList(Paths.get("."));
+        });
+        //updateList(Paths.get("."));
     }
-
-
-
 
 
     public void updateList(Path path) {
@@ -89,20 +89,26 @@ public class ControllerFilePanel implements Initializable {
     }
 
     public void updateListServer(String files) {
-
         filesTable.getItems().clear();
-        String[] f = files.split("\n");
-        for (String s : f) {
-            filesTable.getItems().add(new FileInfo(s));
-        }
+        if (files.equals("folder is empty")) {
+            filesTable.getItems().add(new FileInfo(files));
+        } else {
+            String[] f = files.split("\n");
+            for (String s : f) {
+                if (s != null) filesTable.getItems().add(new FileInfo(s));
+            }
 
-        filesTable.sort();
+            filesTable.sort();
+        }
     }
 
-    public void btnPathUpAction(ActionEvent actionEvent) {
-        Path upperPath = Paths.get(pathField.getText()).getParent();
-        if (upperPath != null && !upperPath.endsWith("Client")) {
-            updateList(upperPath);
+    public void btnPathUpAction(ActionEvent actionEvent) throws IOException {
+        String upperPath = pathField.getText();
+        if (upperPath != null && upperPath.startsWith("Client") && !upperPath.endsWith("root")) {
+            updateList(Paths.get(upperPath).getParent());
+        } else if (upperPath != null && upperPath.startsWith("Server") && !upperPath.endsWith("root")) {
+            os.writeObject(new PathUp());
+            os.flush();
         }
     }
 
@@ -124,11 +130,4 @@ public class ControllerFilePanel implements Initializable {
     }
 
 
-    public String getFlag() {
-        return flag;
-    }
-
-    public void setFlag(String flag) {
-        this.flag = flag;
-    }
 }
